@@ -18,4 +18,14 @@ out/
 Thumbs.db
 
 .vscode/
+
 .idea/
+*.exe
+*.msi
+*.appx
+*.zip
+*.rar
+
+dist/
+release/
+out/

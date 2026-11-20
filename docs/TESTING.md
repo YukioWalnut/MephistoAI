@@ -1,0 +1,7 @@
+# Testing
+
+Run `npm test` for deterministic unit and engine tests. The current suite covers bounded emotional state, lexical memory retrieval, vector cosine/hybrid ranking and non-retrieval of unrelated memories, relationship dimensions, immutable personality defaults with configurable overrides, contextual persona-layer selection, conservative goal proposals, decision selection, autonomy quiet hours and rate limits, reflection checks, speech phrase filtering, explicit external-provider permission, repeated-feedback adaptive personality bounds external-service scope validation, desktop application registration and duplicate rejection, no-shell launch behavior, current-session-only close rules, running-app removal protection, disabled-by-default desktop permission, and the presence/integrity of at least 100 conversation scenarios.
+
+The 100 scenarios in `tests/personality-scenarios.json` are a regression corpus for manual or future model-in-the-loop evaluation. They are not represented as 100 live model evaluations. Runtime/provider integration still requires a configured Ollama model or an explicitly authorized compatible API endpoint.
+
+The current source validation also includes Node syntax checks, JSX parser checks and SQLite schema/migration checks. A production Vite/Electron installer build must be run on a machine with project dependencies installed (`npm install`) and the target platform's packaging toolchain available.

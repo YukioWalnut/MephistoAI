@@ -1,0 +1,3 @@
+const canned=['چطور می‌توانم کمکتان کنم؟','آیا سؤال دیگری دارید؟','به‌عنوان یک مدل هوش مصنوعی'];
+function evaluate({userText='',reply='',usedMemories=[]}={}){const issues=[];if(canned.some(x=>reply.includes(x)))issues.push('canned_phrase');if(reply.length>5000)issues.push('possibly_overlong');if(/یادم هست|به خاطر دارم/u.test(reply)&&!usedMemories.length)issues.push('memory_claim_without_retrieval');if(!reply.trim())issues.push('empty_response');return {score:Math.max(0,100-issues.length*20),issues,summary:issues.length?`Potential quality issues: ${issues.join(', ')}`:'No deterministic quality issue detected',proposedChange:null,requiresHumanReview:true};}
+module.exports={evaluate};
